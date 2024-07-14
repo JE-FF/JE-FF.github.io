@@ -1,8 +1,11 @@
+/* ALL*/
 * {
 	background-color: #f6f6f6;
     font-family: Menlo, Monaco, 'Courier New', monospace;
 	}
-	
+
+/* TITLE */
+/*-------------------------------------------------*/
 .title {
 text-align: center;
 padding-bottom: 2.5%;
@@ -14,6 +17,9 @@ padding-bottom: 2.5%;
     font-style: italic;
     margin: 0 auto;
 	}
+
+/* SOCIAL LINKS */
+/*-------------------------------------------------*/
 
 .socialLinks {
     display: flex;
@@ -28,6 +34,9 @@ padding-bottom: 2.5%;
     display: inline;
 
 }
+
+/* CERTIFICATIONS */
+/*-------------------------------------------------*/
 
 #certifications{
     margin-left: 15%;
@@ -45,19 +54,29 @@ padding-bottom: 2.5%;
     height: 200px;
     width: auto;
     margin-left: 10px;
-    margin-right: 10px;
-
-   
+    margin-right: 10px;   
 }
+
+/* PROJECTS */
+/*-------------------------------------------------*/
 
 #projects {
     text-align: center;
+}
+
+.projectLinks {
+    display: flex;
+    padding-inline-start: 0;
+    justify-content: center;
 }
 
 .projectLogos {
     height: auto;
     width: 200px;
 }
+
+/* ABOUT ME */
+/*-------------------------------------------------*/
 
 .aboutMe {
     margin-left: 15%;
