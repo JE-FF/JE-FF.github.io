@@ -70,6 +70,13 @@ padding-bottom: 2.5%;
     justify-content: center;
 }
 
+.projectLinks > li > a > img {
+    height: 200px;
+    width: auto;
+    margin-left: 10px;
+    margin-right: 10px;   
+}
+
 .projectLogos {
     height: auto;
     width: 200px;
