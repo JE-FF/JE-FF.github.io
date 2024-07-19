@@ -45,7 +45,17 @@ padding-bottom: 2.5%;
     text-align: center;
 }
 
-.certBadges {
+.certBadgesL1 {
+    display: flex;
+    padding-inline-start: 0;
+    justify-content: center;
+}
+
+.certBadgesL2 {
+    display: none;
+}
+
+.certBadgesL1:hover + .certBadgesL2 {
     display: flex;
     padding-inline-start: 0;
     justify-content: center;
