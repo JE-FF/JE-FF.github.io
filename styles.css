@@ -55,10 +55,12 @@ padding-bottom: 2.5%;
     display: none;
 }
 
-.certBadgesL1:hover + .certBadgesL2 {
-    display: flex;
-    padding-inline-start: 0;
-    justify-content: center;
+.certBadgesL1:hover {
+    .certBadgesL2 {
+        display: flex;
+        padding-inline-start: 0;
+        justify-content: center;
+    }
 }
 
 .certBadgesL1 > li > a > img {
