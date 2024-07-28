@@ -61,7 +61,7 @@ padding-bottom: 2.5%;
     display: flex;
 }
 
-.certBadgesL2:hover {
+.certBadgesL2:hover > li {
     display: flex;
 }
 
