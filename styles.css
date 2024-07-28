@@ -51,25 +51,25 @@ padding-bottom: 2.5%;
     display: flex;
 }
 
-.certBadgesL2 {
+.csisCertList {
     padding-inline-start: 0;
     justify-content: center;
     display: none;
 }
 
-.certBadgesL1:hover + .certBadgesL2 {
+#csis:hover + .csisCertList {
     display: flex;
 }
 
-.certBadgesL1:hover + .certBadgesL2 > li {
+#csis:hover + .csisCertList > li {
     display: flex;
 }
 
-.certBadgesL2:hover {
+.csisCertList:hover {
     display: flex;
 }
 
-.certBadgesL2:hover > li {
+.csisCertList:hover > li {
     display: flex;
 }
 
@@ -81,7 +81,7 @@ padding-bottom: 2.5%;
     display: inline;  
 }
 
-.certBadgesL2:hover > li > a > img {
+.csisCertList > li > a > img {
     height: 200px;
     width: auto;
     margin-left: 10px;
