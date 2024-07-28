@@ -52,9 +52,9 @@ padding-bottom: 2.5%;
 }
 
 .certBadgesL2 {
-    display: none;
     padding-inline-start: 0;
     justify-content: center;
+    display: none;
 }
 
 .certBadgesL1:hover + .certBadgesL2 {
@@ -73,7 +73,7 @@ padding-bottom: 2.5%;
     display: inline;  
 }
 
-.certBadgesL2 > li > a > img {
+.certBadgesL2:hover > li > a > img {
     height: 200px;
     width: auto;
     margin-left: 10px;
