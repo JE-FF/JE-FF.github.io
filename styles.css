@@ -5,11 +5,37 @@
     list-style-type: none;
 	}
 
+section {
+    display: grid;
+    place-items: center;
+}
+
+.hidden {
+    opacity: 0;
+    filter: blur(5px);
+    transition: all 1s;
+    transform: translateX(-100%);
+
+}
+
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
+
+@media(prefers-reduced-motion) {
+    .hidden {
+        transition: none;
+    }
+}
+
 /* TITLE */
 /*-------------------------------------------------*/
 .title {
 text-align: center;
 padding-bottom: 2.5%;
+min-height: 100vh;
 }
 
 #pageTitle {
@@ -18,6 +44,18 @@ padding-bottom: 2.5%;
     font-style: italic;
     margin: 0 auto;
 	}
+    
+    /* Blinking technique borrowed from https://www.computerhope.com/issues/ch001651.htm */
+.blink {
+    animation: blink 1s linear infinite;
+   }
+   
+   @keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 1; }
+    50.01% { opacity: 0; }
+    100% { opacity: 0; }
+   }
 
 /* SOCIAL LINKS */
 /*-------------------------------------------------*/
@@ -26,6 +64,7 @@ padding-bottom: 2.5%;
     display: flex;
     padding-inline-start: 0;
     justify-content: center;
+    min-height: 100vh;
 }
 
 .socialLinks > li > a > img {
@@ -43,52 +82,49 @@ padding-bottom: 2.5%;
     margin-left: 15%;
     margin-right: 15%;
     text-align: center;
+    min-height: 100vh;
 }
 
-.certBadgesL1 {
+.certBadge {
     padding-inline-start: 0;
     justify-content: center;
     display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    position: relative;
 }
 
-.csisCertList {
-    padding-inline-start: 0;
-    justify-content: center;
-    display: none;
+.certBadge:nth-child(2) {
+    transition-delay: 200ms;
+}
+.certBadge:nth-child(3) {
+    transition-delay: 300ms;
+}
+.certBadge:nth-child(4) {
+    transition-delay: 400ms;
+}
+.certBadge:nth-child(5) {
+    transition-delay: 500ms;
+}
+.certBadge:nth-child(6) {
+    transition-delay: 600ms;
+}
+.certBadge:nth-child(7) {
+    transition-delay: 700ms;
+}
+.certBadge:nth-child(8) {
+    transition-delay: 800ms;
 }
 
-#csis:hover + .csisCertList {
-    display: flex;
-}
-
-#csis:hover + .csisCertList > li {
-    display: flex;
-}
-
-.csisCertList:hover {
-    display: flex;
-}
-
-.csisCertList:hover > li {
-    display: flex;
-}
-
-.certBadgesL1 > li > a > img {
+.certBadge > div > a > img, .csisCertList > a > img {
     height: 200px;
     width: auto;
     margin-left: 10px;
     margin-right: 10px;
-    display: inline;  
+    display: inline;
 }
 
-.csisCertList > li > a > img {
-    height: 200px;
-    width: auto;
-    margin-left: 10px;
-    margin-right: 10px;
-    display: inline;  
-}
-
+  
 /* PROJECTS */
 /*-------------------------------------------------*/
 
@@ -96,18 +132,22 @@ padding-bottom: 2.5%;
     text-align: center;
 }
 
-.projectLinks {
+.projectLink {
     display: flex;
     padding-inline-start: 0;
     justify-content: center;
     align-items: center;
 }
 
-.projectLinks > li > a > img {
+.projectLink > li > a > img {
     height: auto;
     width: 200px;
     margin-left: 10px;
     margin-right: 10px;   
+}
+
+.projectLink:nth-child(2) {
+    transition-delay: 500ms;
 }
 
 .projectLogos {
@@ -122,21 +162,9 @@ padding-bottom: 2.5%;
     margin-left: 15%;
     margin-right: 15%;
     text-align: center;
-    
+    min-height: 100vh;
 }
 
 #aboutMeStatement {
     text-align: left;
-}
-
-/* Blinking technique borrowed from https://www.computerhope.com/issues/ch001651.htm */
-.blink {
- animation: blink 1s linear infinite;
-}
-
-@keyframes blink {
- 0% { opacity: 1; }
- 50% { opacity: 1; }
- 50.01% { opacity: 0; }
- 100% { opacity: 0; }
 }

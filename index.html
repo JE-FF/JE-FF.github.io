@@ -6,17 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>jeff edson</title>
     <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="assets/icons/favicon.ico">
+    <script defer src="app.js"></script>
   </head>
 
   <body>
-    <!-- Nested header to achieve text-cursor blink animation at the end of page title,
-    I tried to make this cleaner and less confusing, but it kept breaking. No idea why. -->
-    <div class="title">
+    <!-- Nested header to achieve text-cursor blink animation at the end of page title. -->
+    <section class="title hidden">
       <h1 id="pageTitle">
         ~$jeffEdson<h1 id="pageTitle" class="blink">_</h1>
       </h1>
-    </div>
-    <ul class="socialLinks">
+    </section>
+    <ul class="socialLinks hidden">
       <li class="socialLinks">
         <a href="https://www.linkedin.com/in/jeffreyedson">
           <img src="assets/icons/linkedin.svg" alt="link to linkedin"
@@ -40,106 +41,86 @@
 
     <hr />
     <main>
-      <div id="certifications">
+      <section id="certifications">
         <h2>CERTIFICATIONS</h2>
-        <ul class="certBadgesL1">
-          <li id="csis" class="certBadgesL1">
+        <div class="certBadge hidden">
+          <div class="certbadge csis">
             <a href="https://www.credly.com/badges/fb2ad361-21e3-4345-a0df-ced6c8ebcbd1/public_url">
-              <img
-                src="assets/certificate-badges/CompTIA_CSIS.png"
-                alt="CompTIA Secure Infrastructure Specialist certification."
-            /></a>
-          </li>
+              <img src="assets/certificate-badges/CompTIA_CSIS.png" alt="CompTIA Secure Infrastructure Specialist certification."/>
+            </a>
+          </div>
 
-          <li id="googleIT" class="certBadgesL1">
-            <a
-              href="https://www.credly.com/badges/570427cc-fa63-4da7-bfbd-56e103d84b65/public_url"
-            >
-              <img
-                src="assets/certificate-badges/google-it-support-certificate.png"
-                alt="Google IT Support Certification"
-            /></a>
-          </li>
+          <div class="certBadge aPlus">
+            <a href="https://www.credly.com/badges/09b62e70-c22a-4135-abd3-2e8d888baa6b/public_url">
+              <img src="assets/certificate-badges/comptia-a-ce-certification.1.png" alt="Comptia A+ Certification"/>
+            </a>
+          </div>
 
-          <li id="projectPlus" class="certBadgesL1">
-            <a
-              href="https://www.credly.com/badges/59419373-456a-42f9-b684-058802bad062/public_url"
-            >
-              <img
-                src="assets/certificate-badges/comptia-project-certification.1.png"
-                alt="Comptia Project+ Certification"
-            /></a>
-          </li>
-          <li id="humaneTech" class="certBadgesL1">
-            <a
-              href="https://www.credential.net/e32638db-92aa-446e-a00a-8b07dd94ae86"
-            >
-              <img
-                src="assets/certificate-badges/humaneTech2021.png"
-                alt="Center For Humane Technology - humane technologist certification"
-            /></a>
-          </li>
-        </ul>
+          <div class="certBadge netPlus">
+              <a href="">
+                <img src="assets/certificate-badges/CompTIA_Network_2Bce.png" alt="Comptia Network+ Certification"/>
+              </a>
+          </div>
 
-        <!-- Second Level Menu to show certifications included in the CSIS certficiate -->
-        <ul class="csisCertList">
-          <li id="aPlus" class="csisCertList">
-              <a
-                href="https://www.credly.com/badges/09b62e70-c22a-4135-abd3-2e8d888baa6b/public_url"
-              >
-                <img
-                  src="assets/certificate-badges/comptia-a-ce-certification.1.png"
-                  alt="Comptia A+ Certification"
-              /></a>
-          </li>
-        </ul>
-      </div>
+          <div class="certBadge secPlus">
+              <a href="">
+                <img src="assets/certificate-badges/CompTIA_Security_2Bce.png" alt="Comptia Security+ Certification"/>
+              </a>
+          </div>
+
+          <div class="certBadge googleCert">
+            <a href="https://www.credly.com/badges/570427cc-fa63-4da7-bfbd-56e103d84b65/public_url">
+              <img src="assets/certificate-badges/google-it-support-certificate.png" alt="Google IT Support Certification"/>
+            </a>
+          </div>
+
+          <div class="certBadge projectPlus">
+            <a href="https://www.credly.com/badges/59419373-456a-42f9-b684-058802bad062/public_url">
+              <img src="assets/certificate-badges/comptia-project-certification.1.png" alt="Comptia Project+ Certification"/>
+            </a>
+          </div>
+          
+          <div class="certBadge humaneTech">
+            <a href="https://www.credential.net/e32638db-92aa-446e-a00a-8b07dd94ae86">
+              <img src="assets/certificate-badges/humaneTech2021.png" alt="Center For Humane Technology - humane technologist certification"/>
+            </a>
+          </div>
+        </div>
+      </section>
 
       <hr />
-      <div id="projects">
+      <section id="projects hidden">
         <h2>PERSONAL PROJECTS</h2>
-        <ul class="projectLinks">
-          <li class=".projectLinks">
+        <ul class="projectLink hidden">
+          <li class=".projectLink">
             <a href="https://grownathome.netlify.app">
             <img class="projectLogos" src="assets/projects/g@hLogo.svg"
             /></a>
           </li>
-          <li class=".projectLinks">
+          <li class=".projectLink">
             <a href="/assets/projects/IT Capstone.pdf"
               ><img class="projectLogos" src="/assets/projects/modulo.svg"
             /></a>
           </li>
       </ul>
-      </div>
+    </section>
       <hr />
 
-      <div class="aboutMe">
+      <section class="aboutMe hidden">
         <h2>ABOUT ME</h2>
         <p id="aboutMeStatement">
           My whole life I've been plugged in and fascinated as computers and the
           internet changed the world. Naturally, I pursued a career in IT and I
           became a technician for family entertainment centers where I repaired
-          arcade games and administrated small office / home office
-          infrastructure.<br /><br />
+          arcade games and administrated SOHO infrastructure.<br /><br />
 
           I stepped away from IT for a few years to learn more about the world
           and about myself. I did an Americorps service year, then I worked as a
-          medical assistant and nurse's aide. I had chosen to pursue nursing
+          medical assistant and nurse's aide while pursuing nursing
           informatics as a career that would combine my passions for IT and
-          helping others. I was attended nursing school pursuant that goal until
-          the pandemic put a stop to that! Now, I've reoriented and am studying
-          IT and development more generally. I am currently enrolled in a
-          bachelors program for software development, and I am also attending
-          SavvyCoders Bootcamp. I joined Savvy Coders to help me develop the
-          skills that I need to jump into the job market right away.<br /><br />
-
-          My Savvy Coders capstone was inspired by my Americorps experience
-          building community gardens to mitigate food insecurity in communities
-          across the country. I am building a platform for gardeners to sell
-          their home-grown produce, and for consumers to purchase fresh food
-          from their neighbors.
+          helping others. <br /><br />
         </p>
-      </div>
+      </section>
     </main>
     <footer></footer>
 
