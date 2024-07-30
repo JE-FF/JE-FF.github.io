@@ -1,13 +1,20 @@
 /* ALL*/
+:root {
+    --background: #f6f6f6;
+}
 * {
-	background-color: #f6f6f6;
+	background-color: var(--background);
     font-family: Menlo, Monaco, 'Courier New', monospace;
     list-style-type: none;
 	}
 
 section {
-    display: grid;
     place-items: center;
+}
+
+
+h2 {
+    text-align: center;
 }
 
 .hidden {
@@ -32,46 +39,85 @@ section {
 /* TITLE */
 /*-------------------------------------------------*/
 .title {
-text-align: center;
-padding-bottom: 2.5%;
-min-height: 100vh;
-}
+    text-align: left;
+    padding-bottom: 2.5%;
+    background-color: #232627;
+    color: #eff0f1
+    }
 
-#pageTitle {
-    display: inline;
-	font-size: 64px;
+.pageTitle {
+    font-size: 64px;
     font-style: italic;
     margin: 0 auto;
+    background-color: #232627;
+
 }
-    
-    /* Blinking technique borrowed from https://www.computerhope.com/issues/ch001651.htm */
-.blink {
-    animation: blink 1s linear infinite;
+
+.pageTitle::after {
+    content: '';
+    animation: write 1.25s forwards;
+    animation-delay: 1.5s;
 }
-   
-   @keyframes blink {
-    0% { opacity: 1; }
-    50% { opacity: 1; }
-    50.01% { opacity: 0; }
-    100% { opacity: 0; }
-   }
+
+  
+  @keyframes write {
+    0% {
+     content:'';
+    }
+    9% {
+      content:'j';
+    }
+    18% {
+      content:'je';
+    }
+    27% {
+      content:'jef';
+    }
+    36% {
+      content:'jeff';
+    }
+    45% {
+      content:'jeff\\';
+    }
+    54% {
+      content:'jeff\\ ';
+    }
+    63% {
+      content:'jeff\\ e';
+    }
+    72% {
+      content:'jeff\\ ed';
+    }
+    81% {
+      content:'jeff\\ eds';
+    }
+    90% {
+      content:'jeff\\ edso';
+    }
+    100% {
+      content:'jeff\\ edson';
+    }
+  }
 
 /* SOCIAL LINKS */
 /*-------------------------------------------------*/
 
+.socialMedia {
+    min-height: none;
+}
 .socialLinks {
     display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     padding-inline-start: 0;
     justify-content: center;
-    min-height: 100vh;
 }
 
 .socialLinks > div > a > img {
-    height: 200px;
+    height: 100px;
     width: auto;
     margin-left: 10px;
     margin-right: 10px;
-    display: inline;
 }
 
 .socialLinks:nth-child(2) {
@@ -87,20 +133,19 @@ min-height: 100vh;
 /* CERTIFICATIONS */
 /*-------------------------------------------------*/
 
-#certifications{
+.certifications{
     margin-left: 15%;
     margin-right: 15%;
     text-align: center;
-    min-height: 100vh;
+    min-height: 75vh;
 }
 
 .certBadge {
     padding-inline-start: 0;
-    justify-content: center;
+    justify-content: space-evenly;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    position: relative;
 }
 
 .certBadge > div > a > img, .csisCertList > a > img {
@@ -108,7 +153,6 @@ min-height: 100vh;
     width: auto;
     margin-left: 10px;
     margin-right: 10px;
-    display: inline;
 }
 
 /* Animation Stagger */
@@ -137,31 +181,40 @@ min-height: 100vh;
 /* PROJECTS */
 /*-------------------------------------------------*/
 
-#projects {
+.projects {
     text-align: center;
+    min-height: 75vh;
 }
 
 .projectLink {
     display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     padding-inline-start: 0;
     justify-content: center;
     align-items: center;
 }
 
-.projectLink > li > a > img {
+.projectLink > div > a > img {
     height: auto;
     width: 200px;
     margin-left: 10px;
     margin-right: 10px;   
 }
 
-.projectLink:nth-child(2) {
-    transition-delay: 500ms;
+.projectLogos {
+    height: 200px;
+    width: auto;
 }
 
-.projectLogos {
-    height: auto;
-    width: 200px;
+.projectLink:nth-child(2) {
+    transition-delay: 100ms;
+}
+.projectLink:nth-child(3) {
+    transition-delay: 200ms;
+}
+.projectLink:nth-child(4) {
+    transition-delay: 300ms;
 }
 
 /* ABOUT ME */
@@ -171,7 +224,8 @@ min-height: 100vh;
     margin-left: 15%;
     margin-right: 15%;
     text-align: center;
-    min-height: 100vh;
+    min-height: 75vh;
+
 }
 
 #aboutMeStatement {
