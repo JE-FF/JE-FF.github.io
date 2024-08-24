@@ -1,6 +1,7 @@
 /* ALL*/
 :root {
     --background: #f6f6f6;
+    --terminalBackground: #232627;
 }
 * {
 	background-color: var(--background);
@@ -41,7 +42,7 @@ h2 {
 .title {
     text-align: left;
     padding-bottom: 2.5%;
-    background-color: #232627;
+    background-color: var(--terminalBackground);
     color: #eff0f1
     }
 
@@ -49,16 +50,46 @@ h2 {
     font-size: 64px;
     font-style: italic;
     margin: 0 auto;
-    background-color: #232627;
+    background-color: var(--terminalBackground);
 
 }
 
 .pageTitle::after {
     content: '';
-    animation: write 1.25s forwards;
+    animation: write 1.2s forwards;
     animation-delay: 1.5s;
 }
 
+.navBar {
+    background-color: var(--terminalBackground);
+    
+}
+
+.navBar {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 20px;
+    background-color: var(--terminalBackground);
+}
+
+.navBar > li {
+    
+    color:#eff0f1;
+    background-color: var(--terminalBackground);
+}
+
+.navBar > li > a {
+    
+    color:#eff0f1;
+    background-color: var(--terminalBackground);
+}
+
+.navBar::after {
+    content: '';
+    animation: blink 1s infinite;
+}
   
   @keyframes write {
     0% {
@@ -96,6 +127,15 @@ h2 {
     }
     100% {
       content:'jeff\\ edson';
+    }
+  }
+
+  @keyframes blink {
+    50% {
+        content: '_';
+    }
+    100% {
+        content: '';
     }
   }
 
